@@ -87,18 +87,16 @@ namespace MethodsPractice
             int num2 = Convert.ToInt32(q5Num2Input.Text);
             int num3 = Convert.ToInt32(q5Num3Input.Text);
 
-            if(num3 >= num2 && num3 >= num1)
+            int max = num1;
+            if(num2 >= num1)
             {
-                q5Output.Text = $"The largest number is {num3}";
+                max = num2;
             }
-            else if (num2 >= num3 && num2 >= num1)
+            if (num3 >= num2)
             {
-                q5Output.Text = $"The largest number is {num2}";
+                max = num3;
             }
-            else if (num1 >= num3 && num1 >= num2)
-            {
-                q5Output.Text = $"The largest number is {num1}";
-            }
+            q5Output.Text = $"The largest number is {max}";
         }
 
     }
